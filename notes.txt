@@ -19,3 +19,17 @@ COMMANDS:
 -> docker build -t docker-course-frontend ./frontend (to build the frontend image in docker daemon)
 
 -> docker run -d --name frontend -p 4173:4173 docker-course-frontend (this runs the docker container in port 4173 not on 5173 and we can succesfully close the localhost:5173)
+
+
+
+Problems we face without the docker compose commands:
+app worked -> repetative commands,
+run frontend backend and the db sepaerately,
+pass .env varuables sepaerately,
+rebuild the images
+
+
+
+
+But with the docker compose:
+compose file lets us describe full multi container application in one place services, build settings, ports, env, dependencies, volumes i.e we can connect frontend, backend, db in a single file and use docker compose command.
