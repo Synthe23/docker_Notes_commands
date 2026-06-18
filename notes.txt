@@ -1,1 +1,9 @@
-
+NOTES:
+Dockerfile -> recipe to build an image
+from -> run -> copy -> expose -> cmd 
+from -> base image
+run -> executes the commands in the image build time. Install the packages, create dir
+workdir -> sets the wroking directory
+copy -> moves the file from the build context into the image
+expose -> document the port of containerized app listens on inside the conatiner
+cmd -> default command to run when a containers starts from that image
