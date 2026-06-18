@@ -53,3 +53,8 @@ What is the -d command in the docker used for?
 Why shall your dev image shall never go to prod?
 The Problem: Local Docker files frequently leave default passwords, debug flags enabled, and environment variables stored in plain text or .env files.
 The Fix: Production requires container orchestration platforms (like Kubernetes or AWS ECS) that use encrypted, injected secrets (e.g., HashiCorp Vault, AWS Secrets Manager) and strict non-root user permissions.
+
+
+
+What is nginx?
+NGINX (pronounced "engine-x") is a powerful, lightweight software that acts as the traffic cop for the internet. Whenever someone visits your website, NGINX catches their request, fetches the right information, and hands it back to them. It is famous for handling millions of visits at once without slowing down
