@@ -7,3 +7,15 @@ workdir -> sets the wroking directory
 copy -> moves the file from the build context into the image
 expose -> document the port of containerized app listens on inside the conatiner
 cmd -> default command to run when a containers starts from that image
+
+
+
+
+COMMANDS:
+-> docker build -t docker-course-server ./backend (to build a image of the backend)
+
+-> docker run -d --name server -e PORT=3000 -e MONGO_URI=mongodb://127.0.0.1:27017/12@av94t491 -p 3000:3000 docker-course-server (this will create the container from the above image called docker-course-server)
+
+-> docker build -t docker-course-frontend ./frontend (to build the frontend image in docker daemon)
+
+-> docker run -d --name frontend -p 4173:4173 docker-course-frontend (this runs the docker container in port 4173 not on 5173 and we can succesfully close the localhost:5173)
