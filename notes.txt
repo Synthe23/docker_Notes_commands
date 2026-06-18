@@ -33,3 +33,23 @@ rebuild the images
 
 But with the docker compose:
 compose file lets us describe full multi container application in one place services, build settings, ports, env, dependencies, volumes i.e we can connect frontend, backend, db in a single file and use docker compose command.
+
+
+
+Network:
+compose automatically create the network for the project where backend service can talk to frontend service.
+
+
+
+How containers discover each other by service name?
+-> Docker containers discover each other by service or container name using Docker's built-in internal DNS server. When a container attempts to connect to another container using its name, Docker's internal DNS intercept the request and automatically resolves that name to the container's private IP address
+
+
+What is the -d command in the docker used for? 
+-> The -d or --detach flag in Docker runs a container in the background, freeing up your terminal window immediately so you can execute other commands.
+
+
+
+Why shall your dev image shall never go to prod?
+The Problem: Local Docker files frequently leave default passwords, debug flags enabled, and environment variables stored in plain text or .env files.
+The Fix: Production requires container orchestration platforms (like Kubernetes or AWS ECS) that use encrypted, injected secrets (e.g., HashiCorp Vault, AWS Secrets Manager) and strict non-root user permissions.
